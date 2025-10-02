@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0fafc;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #69c9d0;
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em 1em;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+#schedule-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  min-height: 120px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(150,150,150,0.12);
+  padding: 1em;
+}
+.card {
+  background: #ffe066;
+  border-radius: 8px;
+  padding: 1em;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 1px 3px #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: grab;
+}
+.card.dragging {
+  opacity: 0.4;
+  border: 2px dashed #69c9d0;
+}
+.card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5em;
+}
+#reset-btn {
+  background: #69c9d0;
+  color: white;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1em;
+  font-size: 1rem;
+}
+#reset-btn:hover {
+  background: #4ab7c9;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #e8f6f6;
+  color: #444;
+}
+@media (max-width: 600px) {
+  #schedule-board {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card {
+    min-width: unset;
+    width: 100%;
+  }
+}
